@@ -4,6 +4,11 @@ end
 
 class Array
   def hash
+    result = 0
+    self.each_with_index do |ele, i|
+      result += ele.hash / i.hash
+    end
+    result
   end
 end
 
